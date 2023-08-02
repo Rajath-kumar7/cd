@@ -1,0 +1,15 @@
+%{
+%}
+%%
+[a-z.0-9]+@[a-z]+".com"|".in" {printf("\nit is valid");}
+.+ {printf("\nit is not valid");}
+%%
+int yywrap()
+{}
+
+int main()
+{
+printf("/n enter the mail:");
+yylex();
+
+ 
