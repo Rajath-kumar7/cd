@@ -1,0 +1,17 @@
+%{
+int cap_count=0;
+%}
+%%
+[A-Z]+ {printf("%s",yytext);}
+. ;
+%%
+int yywrap()
+{}
+int main()
+{
+printf("enter the string:");
+yylex();
+printf("number of capital letters are :%d\n",cap_count);
+return 0;
+}
+
